@@ -143,20 +143,26 @@
   }
 }
 
-/* ---- RAI OG PAVING imported design system (from existing production site) ---- */
-:root {
-  font-family: 'DM Sans', sans-serif;
-  color: #19221d;
-  background: #f8f8f5;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+/* ---- RAI OG PAVING imported design system (from existing production site) ----
+   These element-level resets MUST stay inside @layer base. Unlayered rules beat
+   every Tailwind utility in v4, which silently killed text-white/85 nav links,
+   button/link fonts and heading colors. */
+@layer base {
+  :root {
+    font-family: 'DM Sans', sans-serif;
+    color: #19221d;
+    background: #f8f8f5;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; min-width: 320px; background: #f8f8f5; color: #19221d; }
+  button, a, input, textarea, select { font: inherit; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: #c6a768; color: #19221d; }
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; background: #f8f8f5; color: #19221d; }
-button, a, input, textarea, select { font: inherit; }
-a { color: inherit; text-decoration: none; }
-::selection { background: #c6a768; color: #19221d; }
+
 .font-display { font-family: 'Playfair Display', Georgia, serif; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
