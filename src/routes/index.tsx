@@ -4,8 +4,8 @@ import { PublicSite } from "@/app/App";
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "RAI OG PAVING",
-  description: "Professional paving services across Adelaide and surrounding suburbs.",
+  name: "Adelaide Paving | Patios, Pathways & Paver Restoration",
+  description: "We create neat new paving and restore tired, uneven pavers across Adelaide.\n\nWhat we do:\n\nNew Patios & Courtyards, Garden Pathways, Driveway Relay & Tidy-ups, Lifting & Re-levelling, Patch Repairs.\n\nFast, same-week service with a clean finish and competitive pricing.\n\nCall today for a free quote.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Adelaide",
@@ -16,9 +16,9 @@ const jsonLd = JSON.stringify({
   email: "nasrullahrai34@gmail.com",
 });
 
-const title = "RAI OG PAVING | Professional Paving Services in Adelaide";
+const title = "Adelaide Paving | Patios, Pathways & Paver Restoration";
 const description =
-  "Professional paving services across Adelaide. Residential paving, driveways, concrete paving, paver installation, pathways and paving repairs.";
+  "We create neat new paving and restore tired, uneven pavers across Adelaide.\n\nWhat we do:\n\nNew Patios & Courtyards, Garden Pathways, Driveway Relay & Tidy-ups, Lifting & Re-levelling, Patch Repairs.\n\nFast, same-week service with a clean finish and competitive pricing.\n\nCall today for a free quote.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
