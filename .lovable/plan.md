@@ -1,27 +1,35 @@
-# Update business content and gallery photos
+# Update business content and Services photos
 
 ## Scope
-- Keep the existing layout, styling, animations, navigation, buttons, contact links, quote form, admin tools, routes, and Supabase connection unchanged.
-- Change the homepage business title and use the supplied description verbatim in the opening and About sections.
-- Update matching homepage and social metadata to the new business title and supplied description, without adding unrelated SEO changes.
+- Keep the existing layout, styling, animations, navigation, buttons, contact links, quote form, admin tools, routes, Supabase connection, and Our Work/Gallery section unchanged.
+- Change the homepage business title to `Adelaide Paving | Patios, Pathways & Paver Restoration`.
+- Use the supplied description verbatim in the opening and About sections, preserving its paragraph structure.
+- Update only the homepage and social title/description metadata required for the new wording.
 
-## Gallery replacement
-- Prepare the five uploaded originals with these records:
-  1. `5.jpg` — Garden Pathway — Garden Pathways
-  2. `4.jpg` — Driveway Paving — Driveways
-  3. `3.jpg` — Patio & Entrance Pathway — Patios & Courtyards
+## Services section
+- Keep the existing card layout, styling, spacing, animation, typography, and responsive behavior.
+- Use the five supplied originals as static site assets in the Services section, not as Gallery records:
+  1. `5.jpg` — Garden Pathways — Garden Pathway
+  2. `4.jpg` — Driveway Relay & Tidy-ups — Driveway Paving
+  3. `3.jpg` — New Patios & Courtyards — Patio & Entrance Pathway
   4. `2.jpg` — Paver Restoration — Paver Restoration
-  5. `1.jpg` — Paver Installation — Paver Restoration
-- Do not hardcode the photos or store them outside the existing gallery system.
-- Because live admin access is not available in this step, do not change production gallery rows or storage objects yet. The actual replacement remains pending an authenticated `/admin` session.
+  5. `1.jpg` — Lifting & Re-levelling / Patch Repairs — Paver Installation
+- Align the existing service cards with the supplied five-service list without adding unrelated services or copy.
+- Preserve each image’s aspect ratio using the existing card treatment, without stretching or excessive cropping.
+
+## Protected areas
+- Do not change Gallery fetching, records, storage objects, categories, cards, visibility behavior, ordering, or lightbox behavior.
+- Do not change `/admin`, the quote form, Call or WhatsApp links, or public navigation.
+- Do not change the Supabase client, project connection, database schema, storage configuration, or RLS policies.
 
 ## Verification
-- Confirm the homepage renders the exact new title and supplied wording in the selected sections.
-- Confirm Call, WhatsApp, quote controls, and `/admin` behavior remain unchanged and `/admin` is absent from public navigation.
-- Check desktop and mobile rendering without visual redesign.
-- Validate the project after the content edits.
-- Once admin access is provided, upload the five originals through the existing admin flow, replace the old gallery records without duplicates, and verify storage URLs, visible cards after refresh, and every lightbox item on desktop and mobile.
+- Confirm the exact title and supplied description render in the requested homepage sections.
+- Confirm all five supplied photos are visible in their Services cards on desktop and mobile.
+- Confirm the existing Gallery records and images remain intact and its lightbox still opens.
+- Confirm Call, WhatsApp, quote controls, and `/admin` remain unchanged, with no public admin link.
+- Validate the project after the focused content and asset changes.
 
 ## Technical details
-- Edit only the existing public page component and homepage metadata files needed for the requested wording.
-- Do not modify the database schema, storage configuration, RLS policies, or Supabase client configuration.
+- Store the uploaded service photos through the project’s static asset flow and reference them only from the existing Services data.
+- Edit only the public page component and homepage metadata files needed for this request.
+- Make no production database or Supabase Storage changes.
