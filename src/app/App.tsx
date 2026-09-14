@@ -6,11 +6,6 @@ import {
 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { QUOTE_STATUSES, WORK_TYPES, type GalleryItem, type QuotePhoto, type QuoteRequest, type QuoteStatus } from '@/types';
-import gardenPathwayAsset from '@/assets/services/garden-pathway.jpg.asset.json';
-import drivewayPavingAsset from '@/assets/services/driveway-paving.jpg.asset.json';
-import patioEntrancePathwayAsset from '@/assets/services/patio-entrance-pathway.jpg.asset.json';
-import paverRestorationAsset from '@/assets/services/paver-restoration.jpg.asset.json';
-import paverInstallationAsset from '@/assets/services/paver-installation.jpg.asset.json';
 
 const logo = '/assets/images/logo_RAIOGPAVING.jpeg';
 const phone = '0423 575 131';
@@ -20,11 +15,11 @@ const email = 'nasrullahrai34@gmail.com';
 const heroImage = 'https://images.pexels.com/photos/8134821/pexels-photo-8134821.jpeg?auto=compress&cs=tinysrgb&h=1200&w=1800';
 
 const services = [
-  { title: 'New Patios & Courtyards', description: 'Patio & Entrance Pathway', icon: LandPlot, image: patioEntrancePathwayAsset.url },
-  { title: 'Garden Pathways', description: 'Garden Pathway', icon: Leaf, image: gardenPathwayAsset.url },
-  { title: 'Driveway Relay & Tidy-ups', description: 'Driveway Paving', icon: Hammer, image: drivewayPavingAsset.url },
-  { title: 'Paver Restoration', description: 'Paver Restoration', icon: Wrench, image: paverRestorationAsset.url },
-  { title: 'Lifting & Re-levelling / Patch Repairs', description: 'Paver Installation', icon: Sparkles, image: paverInstallationAsset.url },
+  { title: 'New Patios & Courtyards', description: 'Patio & Entrance Pathway', icon: LandPlot, image: '/assets/images/services/patio-entrance-pathway.jpg.jpeg' },
+  { title: 'Garden Pathways', description: 'Garden Pathway', icon: Leaf, image: '/assets/images/services/garden-pathway.jpg.jpeg' },
+  { title: 'Driveway Relay & Tidy-ups', description: 'Driveway Paving', icon: Hammer, image: '/assets/images/services/driveway-paving.jpg.jpeg' },
+  { title: 'Paver Restoration', description: 'Paver Restoration', icon: Wrench, image: '/assets/images/services/paver-restoration.jpg.jpeg' },
+  { title: 'Lifting & Re-levelling / Patch Repairs', description: 'Paver Installation', icon: Sparkles, image: '/assets/images/services/paver-installation.jpg.jpeg' },
 ];
 
 function BusinessDescription({ className = '' }: { className?: string }) {
